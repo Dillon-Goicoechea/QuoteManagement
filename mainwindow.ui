@@ -30,7 +30,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="Main_Page">
      <property name="styleSheet">
@@ -39,7 +39,7 @@
      <attribute name="title">
       <string>Tab 1</string>
      </attribute>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="Title">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -67,7 +67,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="AddnewQuoteLabal">
       <property name="geometry">
        <rect>
         <x>270</x>
@@ -86,7 +86,7 @@
        <string>Add New Quote!</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_2">
+     <widget class="QPushButton" name="ViewSavedQuotesButton">
       <property name="geometry">
        <rect>
         <x>260</x>
@@ -133,7 +133,7 @@ QPushButton:pressed {
        <string>View Saved Quotes</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton">
+     <widget class="QPushButton" name="AddNewQuoteButton">
       <property name="geometry">
        <rect>
         <x>470</x>
@@ -187,7 +187,7 @@ QPushButton:pressed {
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="CursiveButton">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -221,7 +221,7 @@ QPushButton:pressed {
        <string notr="true">background-color: rgb(255, 255, 255);</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_2">
+     <widget class="QCheckBox" name="CursiveButton2">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -234,11 +234,11 @@ QPushButton:pressed {
        <string>Cursive option</string>
       </property>
      </widget>
-     <widget class="QTextEdit" name="textEdit">
+     <widget class="QTextEdit" name="QuoteEntryBox">
       <property name="geometry">
        <rect>
-        <x>210</x>
-        <y>150</y>
+        <x>200</x>
+        <y>250</y>
         <width>481</width>
         <height>311</height>
        </rect>
@@ -254,7 +254,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_3">
+     <widget class="QPushButton" name="SaveButton">
       <property name="geometry">
        <rect>
         <x>760</x>
@@ -301,11 +301,11 @@ QPushButton:pressed {
        <string>Save</string>
       </property>
      </widget>
-     <widget class="QLabel" name="label_3">
+     <widget class="QLabel" name="InsertQuoteLabel">
       <property name="geometry">
        <rect>
         <x>310</x>
-        <y>90</y>
+        <y>180</y>
         <width>251</width>
         <height>51</height>
        </rect>
@@ -337,6 +337,63 @@ QPushButton:pressed {
       </property>
       <property name="text">
        <string>Insert Quote Here!</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QTextEdit" name="QuoteAuthorEntryBox">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>70</y>
+        <width>461</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="InsertQuoteAuthorLabel">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>251</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial</family>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <property name="contextMenuPolicy">
+       <enum>Qt::DefaultContextMenu</enum>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+    color: #333;
+    border: 2px solid #555;
+    border-radius: 20px;
+    border-style: outset;
+    background: qradialgradient(
+        cx: 0.3, cy: -0.4, fx: 0.3, fy: -0.4,
+        radius: 1.35, stop: 0 #fff, stop: 1 #888
+        );
+    padding: 5px;
+    </string>
+      </property>
+      <property name="text">
+       <string>Insert Quote Author Here!</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -411,7 +468,7 @@ QPushButton:pressed {
        <enum>Qt::Vertical</enum>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox_3">
+     <widget class="QCheckBox" name="CursiveOption3">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -424,7 +481,7 @@ QPushButton:pressed {
        <string>Cursive Option</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_4">
+     <widget class="QPushButton" name="DeleteQuoteButton">
       <property name="geometry">
        <rect>
         <x>770</x>
@@ -471,7 +528,7 @@ QPushButton:pressed {
        <string>Delete Quote</string>
       </property>
      </widget>
-     <widget class="QPushButton" name="pushButton_5">
+     <widget class="QPushButton" name="EditQuoteButton">
       <property name="geometry">
        <rect>
         <x>770</x>
