@@ -17,5 +17,9 @@ public:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void MoveToNewQuotePage();
+    void MoveToViewSavedQuotesPage();
 };
 #endif // MAINWINDOW_H
