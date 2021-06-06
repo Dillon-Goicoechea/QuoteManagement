@@ -1,6 +1,5 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "insertquotewindow.h"
 #include "QTabBar"
 
 MainWindow::MainWindow(QWidget *parent)

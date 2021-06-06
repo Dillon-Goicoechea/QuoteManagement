@@ -4,3 +4,4 @@ InsertQuoteWindow::InsertQuoteWindow()
 {
 
 }
+
