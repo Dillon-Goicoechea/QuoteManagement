@@ -36,6 +36,8 @@ set(PROJECT_SOURCES
         insertquotewindow.cpp
         viewsavedquotespage.cpp
         viewsavedquotespage.h
+        quote.cpp
+        quote.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)

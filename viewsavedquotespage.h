@@ -1,6 +1,7 @@
 #ifndef VIEWSAVEDQUOTESPAGE_H
 #define VIEWSAVEDQUOTESPAGE_H
 
+#include "quote.h"
 
 class ViewSavedQuotesPage
 {
