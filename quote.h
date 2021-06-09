@@ -2,20 +2,22 @@
 #define QUOTE_H
 
 #include <QObject>
+#include <QFile>
+#include <QTextStream>
 
 class Quote : public QObject
 {
     Q_OBJECT
 public:
     explicit Quote(QObject *parent = nullptr);
-    Quote(std::string content, std::string author);
+    Quote(QString content, QString author);
     void SetQuoteID(int id);
-    std::string ToString();
-    std::string ReadQuoteFromFile();
-    void WriteQuoteToFile();
+    QString ToString();
+    QString ReadQuoteFromFile();
+    bool WriteQuoteToFile();
 protected:
-    std::string _quote;
-    std::string _quoteAuthor;
+    QString _quote;
+    QString _quoteAuthor;
     int _quoteID = 0;
 
 signals:

@@ -22,5 +22,7 @@ private:
 private slots:
     void MoveToNewQuotePage();
     void MoveToViewSavedQuotesPage();
+
+    void SaveQuote();
 };
 #endif // MAINWINDOW_H
