@@ -3,8 +3,9 @@
 #include "viewsavedquotespage.h"
 
 #include <QApplication>
+#include <QString>
 
-void InsertQuote(Quote* q[], std::string content, std::string author);
+void InsertQuote(Quote* q[], QString content, QString author);
 
 int main(int argc, char *argv[])
 {
@@ -15,10 +16,11 @@ int main(int argc, char *argv[])
     InsertQuote(&q, "quote1", "author1"); //example
     delete[] q;
     return a.exec();
+
 }
 
 
-void InsertQuote(Quote* q[], std::string content, std::string author) {
+void InsertQuote(Quote* q[], QString content, QString author) {
     Quote newQ(content, author);
     bool lookingForEmptySlot = true;
     int i = 0;
