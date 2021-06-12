@@ -16,6 +16,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+
+
 private:
     Ui::MainWindow *ui;
 
@@ -24,7 +26,7 @@ private slots:
     void MoveToViewSavedQuotesPage();
 
     void SaveQuote();
-    protected:
+
 
 };
 #endif // MAINWINDOW_H

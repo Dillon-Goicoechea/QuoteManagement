@@ -18,6 +18,7 @@ public:
         void DeleteQuote(int);
         void EditQuote(int);
         void DisplayQuotes();
+        void MoveToHomePage();
 
 };
 

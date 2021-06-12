@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
-#include "QTabBar"
+//#include "QTabBar"
 #include "insertquotewindow.h"
+#include "viewsavedquotespage.h"
 #include <QMessageBox>
 #include <QDebug>
 
@@ -20,27 +21,37 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->ViewSavedQuotesButton, SIGNAL(released()), this, SLOT(MoveToViewSavedQuotesPage()));
     connect(ui->SaveButton, SIGNAL(released()), this, SLOT(SaveQuote()));
 
+    //viewsavedquotespage* s(this);
+
 
 
 }
 
 void MainWindow::MoveToNewQuotePage() {
-    QTabWidget* q = this->ui->tabWidget;
+    ui->InsertQuotePage->setVisible(true);
+    ui->MainPage->setVisible(false);
+    ui->ViewSavedQuotesPage->setVisible(false);
+    ui->InsertQuotePage->resize(1000, 1000);
+    /*QTabWidget* q = this->ui->tabWidget;
     if (q->isTabVisible(1) == false) {
         q->setTabVisible(1, true);
         q->setTabVisible(0, false);
-    }
+    }*/
 }
 
 void MainWindow::MoveToViewSavedQuotesPage() {
-    QTabWidget* q = this->ui->tabWidget;
+    ui->ViewSavedQuotesPage->setVisible(true);
+    ui->MainPage->setVisible(false);
+    ui->InsertQuotePage->setVisible(false);
+    ui->ViewSavedQuotesPage->resize(1000, 1000);
+    /*QTabWidget* q = this->ui->tabWidget;
     if (q->isTabVisible(2) == false) {
         q->setTabVisible(2, true);
         q->setTabVisible(0, false);
-    }
+    }*/
 }
 
-void MainWindow::SaveQuote(){
+void MainWindow::SaveQuote() {
 
     QString quote = ui->QuoteEntryBox->toPlainText();
     QString author = ui->QuoteAuthorEntryBox->toPlainText();

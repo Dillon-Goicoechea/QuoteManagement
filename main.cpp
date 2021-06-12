@@ -16,7 +16,6 @@ int main(int argc, char *argv[])
     InsertQuote(&q, "quote1", "author1"); //example
     delete[] q;
     return a.exec();
-
 }
 
 
