@@ -14,7 +14,7 @@ class MainWindow : public QMainWindow
 
 public:
     MainWindow(QWidget *parent = nullptr);
-    ~MainWindow();
+    virtual ~MainWindow();
 
 
 
@@ -22,9 +22,12 @@ private:
     Ui::MainWindow *ui;
 
 private slots:
+    void DisplayQuotes();
+    void EditQuote(int);
+    void DeleteQuote(int);
     void MoveToNewQuotePage();
     void MoveToViewSavedQuotesPage();
-
+    void MoveToHomePage();
     void SaveQuote();
 
 

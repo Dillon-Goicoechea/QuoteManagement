@@ -28,7 +28,7 @@ void Quote::SetQuoteID(int id) {
 }
 
 QString Quote::ReadQuoteFromFile() {
-  QFile file("C:\\development\\applicationDevelopmnet2021\\QuoteManagement\\QuoteStorage.txt");
+  QFile file("QuoteStorage.txt");
   if(!file.open(QIODevice::ReadOnly)){
         qDebug() << "File not open" << file.error();
         return "file Read Failed";
@@ -45,7 +45,7 @@ QString Quote::ReadQuoteFromFile() {
 }
 
 bool Quote::WriteQuoteToFile(){
-    QFile file("C:\\development\\applicationDevelopmnet2021\\QuoteManagement\\QuoteStorage.txt");
+    QFile file("QuoteStorage.txt");
 
     if(file.open(QIODevice::WriteOnly | QIODevice::Append | QIODevice::Text)){
         QTextStream stream(&file);

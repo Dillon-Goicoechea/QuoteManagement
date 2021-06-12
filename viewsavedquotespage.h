@@ -11,6 +11,7 @@ class ViewSavedQuotesPage : public QMainWindow
  Q_OBJECT;
 public:
     ViewSavedQuotesPage(QWidget *parent = nullptr);
+    virtual ~ViewSavedQuotesPage();
     private:
         Ui::MainWindow *ui;
 

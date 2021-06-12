@@ -13,12 +13,12 @@ ViewSavedQuotesPage::ViewSavedQuotesPage(QWidget *parent) :  QMainWindow(parent)
 
 {
     ui->setupUi(this);
-    connect(ui->ViewSavedQuotesButton, SIGNAL(released()), this, SLOT(DisplayQuotes()));
-    connect(ui->EditQuoteButton, SIGNAL(released()), this, SLOT(EditQuote()));
-    connect(ui->DeleteQuoteButton, SIGNAL(released()), this, SLOT(DeleteQuote()));
-    connect(ui->BackToMain2, SIGNAL(released()), this, SLOT(MoveToHomePage()));
 
 
+}
+
+ViewSavedQuotesPage::~ViewSavedQuotesPage() {
+    delete ui;
 }
 
 void ViewSavedQuotesPage::DisplayQuotes(){
@@ -55,13 +55,6 @@ void ViewSavedQuotesPage::DeleteQuote(int){
 }
 
 void ViewSavedQuotesPage::MoveToHomePage() {
-    ui->ViewSavedQuotesPage->setVisible(true);
-    ui->MainPage->setVisible(false);
-    ui->InsertQuotePage->setVisible(false);
-    ui->ViewSavedQuotesPage->resize(1000, 1000);
 
-    ui->MainPage->setVisible(true);
-    ui->ViewSavedQuotesPage->setVisible(false);
-    ui->InsertQuotePage->setVisible(false);
 }
 
