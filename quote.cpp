@@ -1,5 +1,8 @@
 #include "quote.h"
 #include <QDebug>
+#include <QString>
+#include <QFile>
+#include "mainwindow.h"
 
 //Not really sure what this does
 Quote::Quote(QObject *parent) : QObject(parent)
@@ -25,7 +28,20 @@ void Quote::SetQuoteID(int id) {
 }
 
 QString Quote::ReadQuoteFromFile() {
-    return "";
+  QFile file("C:\\development\\applicationDevelopmnet2021\\QuoteManagement\\QuoteStorage.txt");
+  if(!file.open(QIODevice::ReadOnly)){
+        qDebug() << "File not open" << file.error();
+        return "file Read Failed";
+  }
+    QString quote, author;
+
+  while(!file.atEnd()){
+      quote = file.readLine();
+      author + file.readLine();
+       Quote(quote,author);
+}
+  file.close();
+  return "File Read Succesfully";
 }
 
 bool Quote::WriteQuoteToFile(){
