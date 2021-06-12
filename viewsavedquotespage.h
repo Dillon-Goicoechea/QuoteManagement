@@ -2,11 +2,23 @@
 #define VIEWSAVEDQUOTESPAGE_H
 
 #include "quote.h"
+#include <QMainWindow>
 
-class ViewSavedQuotesPage
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+class ViewSavedQuotesPage : public QMainWindow
 {
+ Q_OBJECT;
 public:
-    ViewSavedQuotesPage();
+    ViewSavedQuotesPage(QWidget *parent = nullptr);
+    private:
+        Ui::MainWindow *ui;
+
+    private slots:
+        void DeleteQuote(int);
+        void EditQuote(int);
+        void DisplayQuotes();
+
 };
 
 #endif // VIEWSAVEDQUOTESPAGE_H

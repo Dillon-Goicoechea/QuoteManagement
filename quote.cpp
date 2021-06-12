@@ -2,6 +2,7 @@
 #include <QDebug>
 #include <QString>
 #include <QFile>
+#include "mainwindow.h"
 
 //Not really sure what this does
 Quote::Quote(QObject *parent) : QObject(parent)
@@ -33,11 +34,12 @@ QString Quote::ReadQuoteFromFile() {
         return "file Read Failed";
   }
     QString quote, author;
+
   while(!file.atEnd()){
       quote = file.readLine();
       author + file.readLine();
-      Quote(quote, author);
-  }
+       Quote(quote,author);
+}
   file.close();
   return "File Read Succesfully";
 }
